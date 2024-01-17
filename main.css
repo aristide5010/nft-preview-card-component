@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadre {
+    height: 34em;
+    width: 20.5em;
+    border-radius: 15px;
+    background: hsl(216, 50%, 16%);
+}
+
+.contenu {
+    margin: 0 7%;
+    height: 100%;
+    border: 1px solid hsl(0, 0%, 100%, 0);
+}
+
+.img-container {
+    position: relative;
+    background: url(images/image-equilibrium.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 17.5em;
+    width: 100%;
+    border-radius: 10px;
+    margin: 8% 0;
+}
+.img-container:hover::before {
+    content: "";
+    position: absolute;
+    background: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(178, 100%, 50%, 0.5);
+    display: block;
+    top: 0;
+    left: 0;
+    height: 17.5em;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 1.35em;   
+    font-weight: 600;
+}
+h1:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.description {
+    line-height: 1.7em;
+    font-weight: 300;
+    margin: 12px 0 0;
+}
+
+p {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#prix {
+    display: flex;
+    color: hsl(178, 100%, 50%);
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+#prix::before {
+    display: inline-block;
+    content: "";
+    background: url(images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 18px;
+}
+
+#délai {
+    display: flex;
+    font-size: 0.95em;
+}
+#délai::before {
+    display: inline-block;
+    content: "";
+    background: url(images/icon-clock.svg);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 25px;   
+}
+
+.nom {
+    border-top: 1px hsl(215, 32%, 27%) solid;
+    padding: 15px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3.25em auto;
+    grid-template-rows: 2em;
+    font-size: 0.95em;
+}
+
+#img-avatar {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+#nom {
+    justify-self: start;
+    align-self: center;
+}
+#nom span {
+    color: white;
+}
+#nom span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+    .cadre {
+        height: 37.3em;
+        width: 21.85em;
+        box-shadow: 0px 30px 0 15px hsl(217, 56%, 10%), 0px 30px 0 45px hsl(220, 54%, 11%);
+    }
+
+    .contenu {
+        margin: 0 6.5%;
+        border: 1px solid hsl(0, 0%, 100%, 0);
+    }
+
+    .img-container {
+        padding: 11px 0;
+    }
+    .img-container:hover::before {
+        padding: 11px 0;
+    }
+
+    h1 {
+        letter-spacing: 0.3px;
+    }
+
+    .description {
+        font-size: 1.125em;
+        line-height: 1.45em;
+        margin-top: 16px;
+    }
+
+    .infos {
+        margin: 8px 0;
+    }
+
+    #prix {
+        font-size: 0.95em;
+    }
+
+    #délai {
+        font-size: 1em;
+    }
+
+    .nom {
+        grid-template-columns: 3.1em auto;
+        font-size: 1em;
+    }
+
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2%;
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+.attribution a {
+    color: rgb(199, 255, 255);
+    text-decoration: none;
+}
+.attribution a:hover {
+    color: hsl(178, 100%, 50%);
+}
